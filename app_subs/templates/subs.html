@@ -1,0 +1,50 @@
+{% extends 'layouts/base.html' %}
+
+
+{% block content %}
+    <h2>Abonnements</h2>
+
+    <form method="POST" class="post-form" enctype="multipart/form-data">{% csrf_token %}
+        {{ form.as_p }}
+        {% if messages %}
+            <ul class="messages">
+                {% for message in messages %}
+                <li {% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+                {% endfor %}
+            </ul>
+        {% endif %}
+        <button type="submit" class="save btn btn-default">S'abonner</button>
+    </form>
+    <article>
+        <h2>Abonnements</h2>
+        <table class="table">
+        {% for f in following %}
+            <tr>
+                <td> {{f}} </td>
+                <td><a class="btn delete" href="/unsubscribe/{{ f.id }}">Supprimer</a></td>
+            </tr>
+
+        {% empty %}
+            <p>Vous n'êtes abonné à aucun utilisateur.</p>
+
+        {% endfor %}
+        </table>
+    </article>
+    
+
+    <article>
+        <h2>Abonnés</h2>
+        <table class="table">
+        {% for f in followers %}
+            <tr>
+                <td> {{f}} </td>
+            </tr>
+        {% empty %}
+            <p>Aucun utilisateur n'est abonné à vous.</p>
+
+        {% endfor %}
+        </table>
+    </article>
+    
+
+{%endblock content%}

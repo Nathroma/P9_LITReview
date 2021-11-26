@@ -1,0 +1,26 @@
+{% extends 'layouts/base.html' %}
+
+
+{% block content %}
+
+
+    <h2>Flux</h2>
+
+    <a class="btn feed" href="/ticket/create/">Demander une critique</a>
+    <a class="btn feed" href="/review/create/">Créer une critique</a>
+
+    {% for post in posts %}
+        {% if post.content_type == 'TICKET' %}
+            {% include 'snippets/ticket_snippet.html' %}
+        {% elif post.content_type == 'REVIEW' %}
+            {% include 'snippets/review_snippet.html' %}
+        {% endif %}
+
+        {% empty %}
+            <article>
+                <p>Il n'y a aucun ticket ni review pour le moment</p>
+                <p>Commencez par suivre des personnes ou créer un ticket ou une critique.</p>
+            </article>
+    {% endfor %}
+    
+{% endblock %}

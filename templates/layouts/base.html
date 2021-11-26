@@ -1,0 +1,48 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="utf-8" />
+        <title>LitReview</title>
+
+        <link rel="stylesheet" href="{% static 'style/style.css'%}" />
+
+    </head>
+    
+
+    <body>
+          <header>
+            <h1><a href="/">LitReview</a></h1>
+
+            {% if request.user.is_authenticated %}
+
+              <nav>
+                <ul id="menu">
+                  <li><a href="/">Flux</a></li>
+                  <li><a href="/posts/">Posts</a></li>
+                  <li><a href="/subs/">Abonnements</a></li>
+                  <li><a href="/logout/">Déconnexion</a></li>
+                </ul>
+              </nav>
+            
+            {% else %}
+
+              <nav>
+                <ul id="menu">
+                  <li><a href="/login/">Connexion</a></li>
+                  <li><a href="/register/">Inscription</a></li>
+                </ul>
+              </nav>
+
+            {% endif %}
+
+
+          </header>
+
+            <div class="content">
+            {% block content %}
+            {% endblock %}
+            </div>
+
+    </body>
+</html>
