@@ -1,0 +1,14 @@
+{% extends 'layouts/base.html' %}
+
+
+{% block content %}
+    <h2>Modification de la critique</h2>
+    
+    {% include 'snippets/ticket_snippet_forreview.html' %}
+    <article class="review">
+        <form method="POST" class="post-form" enctype="multipart/form-data">{% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit" class="save btn btn-default">Envoyer</button>
+        </form>
+    </article>
+{% endblock %}

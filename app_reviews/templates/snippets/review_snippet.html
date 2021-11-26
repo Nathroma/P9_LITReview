@@ -1,0 +1,30 @@
+{% block content %}
+    <article class="review">
+
+
+        
+        {% for user in users %}
+            {% if user.id == post.user_id %}
+                <p class="user">Critique - {{ user }}</p>
+            {% endif %}
+        {% endfor %}
+        <p class="date">{{ post.time_created }} </p>
+        <h3 class="title">{{ post.headline }} - {{post.rating}}⭐</h3>
+        <p class="body"> {{ post.body }} </p>
+
+        {% for ticket in ticket_list_for_review %}
+
+            {% if ticket.id == post.ticket_id %}
+                {% include 'snippets/ticket_snippet_forreview.html' %}
+            {% endif %}
+
+        {% endfor %}
+
+        {% if post.user_id == user.id %}
+            <a class="btn modify" href="/review/modify/{{ post.id }}">Modifier</a>
+            <a class="btn delete" href="/review/delete/{{ post.id }}">Supprimer</a>
+        {% endif %}
+
+    </article>
+
+{% endblock %}

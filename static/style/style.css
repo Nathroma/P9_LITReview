@@ -1,0 +1,229 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgb(236, 236, 236);
+    color: rgb(0, 0, 0);
+    overflow-x: hidden;
+}
+h2 {
+    font-size: 2vw;
+}
+/* Navigation */
+
+nav ul
+{
+    list-style-type: none;
+    display: flex;  
+}
+
+nav li
+{
+    margin-right: 15px;
+}
+
+nav a
+{
+    font-size: 1.5vw;
+    color: rgb(0, 0, 0);
+    padding-bottom: 3px;
+    text-decoration: underline;
+    color: darkblue
+}
+
+nav a:hover {
+    color: rgb(128, 128, 128);
+}
+
+header {
+
+    display: inline-flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgb(255, 255, 255);
+    border: solid rgb(196, 196, 196);
+    height: 5vw;
+}
+
+
+
+header h1 a{
+    margin-left: 25px;
+    font-size: 3vw;
+    color: rgb(0, 0, 0);
+    text-decoration: underline;
+}
+
+.content {
+  text-align: center;
+}
+
+/* Articles */
+
+article {
+
+    background-color: rgb(247, 247, 247);
+    border: solid rgb(196, 196, 196);
+    border-radius: 5px;
+    margin: 2% 10% 1% 10%;
+    padding-bottom: 1%;
+    color: rgb(0, 0, 0);
+}
+
+
+
+article .user {
+    float: left;
+    margin-left: 15px;
+    color: rgb(87, 87, 87);
+}
+
+article .date {
+    float: right;
+    margin-right: 15px;
+    color: rgb(87, 87, 87);
+
+}
+
+.review {
+    background-color: #8b8b8b;
+}
+
+.ticket {
+    background-color: #8a8a8a;
+}
+/* Bottuns */
+
+.btn {
+    transition-duration: 0.2s;
+    background-color: rgb(255, 255, 255);
+    border: solid black;
+    border-radius: 10px;
+    color: rgb(0, 0, 0);
+    padding: 10px 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin-bottom: 1%;
+    font-weight: bold;
+  }
+  
+.btn:hover {
+    background-color: rgb(211, 211, 211);
+    cursor: pointer;
+}
+
+.btn.delete {
+    border: solid rgb(153, 0, 0);
+    background-color: rgb(255, 239, 239);
+  }
+
+.btn.modify {
+    border: solid rgb(4, 114, 0);
+    background-color: rgb(231, 255, 232);
+  }
+
+.btn.delete:hover {
+    background-color: rgb(255, 113, 113);
+    border: solid rgb(153, 0, 0);
+  }
+
+.btn.modify:hover {
+    background-color: rgb(119, 255, 115);
+    border: solid rgb(4, 114, 0);
+  }
+
+.btn.feed {
+    width: 12%;
+}
+
+.table {
+    margin: auto;
+    table-layout: auto;
+    width: 20%;
+  }
+
+.table .btn {
+    font-size: 1vw;
+    padding: 5%;
+}
+
+.table tr {
+    font-size: 1.5vw;
+}
+
+
+input {
+    margin: 8px 0;
+    box-sizing: border-box;
+  }
+
+input:focus {
+    border: 1px  #555;
+  }
+
+input[type=text], input[type=password], textarea {
+    width: 60%;
+    height: 150px;
+    padding: 12px 20px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    background-color: #f8f8f8;
+    resize: none;
+  }
+
+input[type=text], input[type=password] {
+    height: 50px;
+    margin: 8px 0;
+    box-sizing: border-box;
+  }
+
+
+label {
+    display: block;
+    width: 10em;
+    margin-right: 1em;
+    }
+
+form {
+    margin-left: 28%;
+    text-align: start;
+}
+
+
+form ul
+{
+    list-style-type: none;
+    display: flex;    
+}
+
+form li
+{
+    margin-right: -10%;
+}
+
+div .ticket-content {
+    padding: 3% 25% 3% 25%;
+    text-align: end;
+}
+
+.ticket-content img {
+    width: 30%;
+    border-radius: 10px;
+    border: rgb(0, 0, 0) solid;
+}
+
+.ticket-text {
+    position: absolute;
+    text-align: start;
+    padding-right: 45%;
+}
+
+article .body {
+    font-size: 1.1vw;
+}
+
+article .title {
+    font-size: 1.3vw;
+}

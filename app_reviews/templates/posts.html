@@ -1,0 +1,25 @@
+{% extends 'layouts/base.html' %}
+{% block content %}
+
+
+    <h2>Vos posts</h2>
+
+    
+    {% for post in posts %}
+
+        {% if post.content_type == 'ticket' %}
+                {% include 'snippets/ticket_snippet.html' %}
+        {% elif post.content_type == 'review' %}
+                {% include 'snippets/review_snippet.html' %}
+        {% endif %}
+
+        
+        {% empty %}
+            <article>
+                <p>Il n'y a aucun ticket ou aucune review à afficher ici !</p>
+                <p>Commencez par suivre des personnes ou créer un ticket ou une critique.</p>
+            </article>
+    {% endfor %}
+
+
+{% endblock %}
