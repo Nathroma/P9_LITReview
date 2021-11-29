@@ -22,4 +22,13 @@ Installez les packages requis à l'aide de la commande suivante:
 
 `pip install -r requirements.txt`
 
-Attention les commandes peuvent differer suivant l'endroit ou à était créer l'environement virtuel
+Puis lancez le serveur en utilisant la commande:
+
+`python .\manage.py runserver`
+
+Une fois le serveur lancé suivez ce lien afin d'arriver sur le site:
+
+http://127.0.0.1:8000
+
+
+Attention les commandes peuvent differer suivant l'endroit ou à était créer l'environnement virtuel !
